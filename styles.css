@@ -11,6 +11,7 @@ body,
 header,
 h1,
 h2,
+h3,
 p,
 blockquote,
 dl,
@@ -18,6 +19,10 @@ dd,
 ul,
 li {
   margin: 0;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 /*********************************************************
@@ -34,6 +39,7 @@ h1 {
 }
 
 .welcome-text-container p {
+    line-height: 1.8;
     margin: 30px 0;
 }
 
@@ -84,25 +90,36 @@ img {
     color: #3495eb;
 }
 
-/**************HEADER*************/
+/************************HEADER************************/
 
 header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
 }
 
 .logo-container{
+    margin-left: 4rem;/*to bring log0 towards middle - delete if space-around*/
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 60px;
+    height: 60px;
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 35%;
+    display: block;
 }
 
 
 .links {
     list-style: none;
     padding: 0;
+    padding-right: 4rem; /*to bring links towards middle - delete if space-around*/
     display: flex;
     justify-content: space-between;
     margin: 0 20px;
@@ -116,7 +133,37 @@ li:hover{
     cursor: pointer;
 }
 
-/********************************/
+a:link {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*BELOW IS JUST CSS FOR ANIMATED UNDERLINE ON LINKS*/
+
+a {
+    display: inline-block;
+    position: relative;
+  }
+  
+a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #E5E7EB;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
 
 /**************************************************
 
@@ -231,6 +278,7 @@ i {
     padding: 30px;
     border-radius: 10px;
     width: 70%;
+    height: 45%;
     display: flex;
     justify-content: space-around;
     align-items: center;
