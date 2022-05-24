@@ -51,7 +51,7 @@ p, img, li {
 
 .hero {
     background-color:#2275bd;
-    height: 450px;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
 }
@@ -59,13 +59,18 @@ p, img, li {
 .main-hero {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.welcome-text-container {
+    margin-left: 40px;
 }
 
 .banner-container {
     margin-left: 100px;
     width: 400px;
     height: 300px;
+    margin-right: 40px;
 }
 
 img {
@@ -172,7 +177,6 @@ a:hover:after {
 ****************************************************/
 
 .card-container {
-    height: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -187,10 +191,11 @@ h2 {
 
 
 .cards {
-    margin-top: 40px;
+    margin: 40px 50px;
     display: flex;
-    /*flex-wrap: wrap;*/
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 3rem;
 }
 
@@ -220,7 +225,6 @@ h2 {
 ****************************************************/
 
 .quote-container {
-    height: 300px;
     background-color: #E5E7EB;
     display: flex;
     justify-content: center;
@@ -229,6 +233,7 @@ h2 {
 
 .text-container {
     width: 55%;
+    margin: 80px;
     display: flex;
     flex-direction: column;
     justify-self: center;
@@ -251,10 +256,23 @@ blockquote {
 ****************************************************/
 
 .call-container {
-    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.call-content {
+    background-color: #3495eb;
+    margin: 50px;
+    padding: 30px;
+    border-radius: 10px;
+    width: 70%;
+    height: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: E5E7EB;
+    font-weight: lighter;
 }
 
 .call-box em {
@@ -270,19 +288,6 @@ i {
     margin-top: 10px;
     display: block;
     color: #E5E7EB;
-    font-weight: lighter;
-}
-
-.call-content {
-    background-color: #3495eb;
-    padding: 30px;
-    border-radius: 10px;
-    width: 70%;
-    height: 45%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: E5E7EB;
     font-weight: lighter;
 }
 
@@ -317,3 +322,32 @@ footer {
     background-color: #3495eb;
     color: #E5E7EB;
 }
+
+
+
+/****CSS FOR RESPONSIVE DESIGN ****/
+
+
+/*Mobile Device Queries*/
+@media (max-width: 768px) {
+
+}
+
+/*smaller tab widht*/
+
+@media (max-width: 1090px) {
+
+.welcome-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 30px; 
+       
+}
+
+}
+
+
+
+
+
