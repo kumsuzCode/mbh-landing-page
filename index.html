@@ -7,8 +7,49 @@
     <title>MBH Coaching</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./box-shadows.min.css">
+    <script defer src="app.js"></script>
 </head>
 <body>
+
+    <!-- Code for pop-modal which will act as contact page -->
+
+    <div class="contact-form" id ="contact-form">
+
+        <div class="form-header">
+            <button data-close-button class = "close-button">&times;</button>
+        </div>
+
+        <div class="form-body">
+
+            <div class="left">
+
+                <em>Contact Us!</em>
+
+                <p>
+                    Give us a call at 0400000000 or send us Message
+                    using the form on the right.
+                </p>
+
+
+            </div>
+
+            <div class="user-form">
+
+                <input type="text" name="Fname" id="Fname" placeholder="First Name">
+                <input type="text" name="Lname" id="Lname" placeholder="Last Name">
+                <input type="text" name="email" id="email" placeholder="E-mail address">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Message">
+                </textarea>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="overlay"></div>
+
+    <!-------------------------------------------------------->
 
     <div class="hero">
 
@@ -35,7 +76,7 @@
             <div class="welcome-text-container">
                 <h1>MBH Coaching College</h1>
                 <p>Pre Kindy to year 12 <br> All subjects, all levels</p>
-                <button>Enquire Now!</button>
+                <button data-form-target="#contact-form">Enquire Now!</button>
             </div>
     
             <div class="banner-container">
@@ -48,7 +89,7 @@
     </div>
 
     <div class="card-container" >
-        <h2>Here at _ we provide personalised, engaging and insightful tutelage <br> for a wide variety of subjects!</h2>
+        <h2>Here at MBH we provide personalised, engaging and insightful tutelage <br> for a wide variety of subjects!</h2>
         <div class="cards">
             <div class="card"><img src="./images/online-lesson.png"> </div>
             <div class="card"><img src="./images/one-on-one.png"> </div>
@@ -61,7 +102,7 @@
 
         <div class="text-container">
             <blockquote>
-                Here we have some cool quote or something else about why _ is so cool
+                Here we have some cool quote or something else about why MBH is so cool
                 and great.
             </blockquote>
 
@@ -81,7 +122,7 @@
                 <i>Enquire about our programs by clicking the button there!</i>
             </div>
     
-            <button>Contact!</button>
+            <button data-form-target="#contact-form">Contact!</button>
 
         </div>
         

@@ -60,6 +60,7 @@ p, img, li {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 30px;
 }
 
 .welcome-text-container {
@@ -323,6 +324,71 @@ footer {
     color: #E5E7EB;
 }
 
+/**************************************************
+
+    POP UP CONTACT FORM
+
+****************************************************/
+
+.contact-form {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: solid black 1px; 
+    border-radius: 15px;
+    z-index: 10;
+    background-color:white; /*Change later to make modal nice*/
+    width: 60%;
+    max-width: 80%;
+}
+
+.contact-form.active {
+    transform: translate(-50%, -50%) scale(1);
+
+}
+
+.form-header {
+    padding: 3px 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.form-body {
+    display: flex;
+    border: solid red;
+    padding: 0 40px
+}
+
+
+#overlay {
+    position:fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(128,128,128,.7);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
 
 
 /****CSS FOR RESPONSIVE DESIGN ****/
@@ -337,13 +403,13 @@ footer {
 
 @media (max-width: 1090px) {
 
-.welcome-text-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    margin-bottom: 30px; 
-       
-}
+    .welcome-text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        margin-bottom: 30px; 
+        
+    }
 
 }
 
