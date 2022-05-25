@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,700&family=Montserrat:wght@300&family=Space+Mono&display=swap');
-* {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
     font-family: 'Lato', sans-serif;
 }
+
+textarea, input { font-family: 'Lato', sans-serif}
 
 body,
 header,
@@ -146,6 +150,10 @@ a:link {
 
 /*BELOW IS JUST CSS FOR ANIMATED UNDERLINE ON LINKS*/
 
+a, a:visited, a:hover, a:active {
+    color: inherit;
+  }
+
 a {
     display: inline-block;
     position: relative;
@@ -276,7 +284,7 @@ blockquote {
     font-weight: lighter;
 }
 
-.call-box em {
+em {
     font-style: normal;
     color:#E5E7EB;
     margin: 30px 0;
@@ -336,21 +344,27 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
-    border: solid black 1px; 
-    border-radius: 15px;
     z-index: 10;
     background-color:white; /*Change later to make modal nice*/
     width: 60%;
     max-width: 80%;
+    border-radius:20px;
 }
 
 .contact-form.active {
     transform: translate(-50%, -50%) scale(1);
+    border-radius:20px;
 
 }
 
+/**********************************/
+.form-body {
+    display: flex;
+    line-height: 1.8;
+}
+
 .form-header {
-    padding: 3px 15px;
+    padding: 3px 0;
     display: flex;
     justify-content: flex-end;
 }
@@ -362,15 +376,77 @@ footer {
     background: none;
     font-size: 1.5rem;
     font-weight: bold;
-
+    color: #848489;
+    padding-right: 12px;
 }
 
-.form-body {
+.invisible-header {
+    padding: 10px 15px;
+}
+
+.left {
+    padding: 20px 40px;
+    background-color: #3495eb;
+}
+
+.left em {
+    padding: 40px 0;
+    font-size: 25px;
+}
+
+.user-form {
+    background-color: #fafafa;
+    
+}
+
+.form-inputs{
+    padding: 0 40px 40px 40px;
+}
+
+.user-form em {
+    color:#3495eb;
+    font-size: 25px;
+}
+
+input, textarea {
+    border:none;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    background-color: rgba(52, 149, 235, 0.15);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border:1px solid #3495eb !important;
+    box-shadow: 0 0 2px #3495eb !important;
+}
+
+.send-form {
+    background-color: #3495eb;
+    margin-top: 10px;
+    padding: 16px;
+    font-size:16px;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.2s ease-in;
+}
+
+.send-form:hover {
+    font-size: bolder;
+    background-color: white;
+    color: #3495eb;
+    border: #3495eb solid 2px;
+}
+
+.send-container {
     display: flex;
-    border: solid red;
-    padding: 0 40px
+    justify-content: center;
 }
 
+
+/*Code for overlay that is put on screen when contact screen opens*/
 
 #overlay {
     position:fixed;
@@ -380,7 +456,7 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(128,128,128,.7);
+    background-color: rgba(128,128,128,.8);
     pointer-events: none;
 }
 
@@ -401,7 +477,7 @@ footer {
 
 /*smaller tab widht*/
 
-@media (max-width: 1090px) {
+@media (max-width: 1150px) {
 
     .welcome-text-container {
         display: flex;
